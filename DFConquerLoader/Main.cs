@@ -23,7 +23,7 @@ namespace DFConquerLoader
                     Arguments = "blacknull"
                 }
             };
-            if (File.Exists(pConquer.StartInfo.FileName))
+            if (File.Exists(pConquer.StartInfo.FileName) && File.Exists("Inject.dll"))
             {
                 pConquer.Start();
                 Injector injector = new Injector(pConquer);
